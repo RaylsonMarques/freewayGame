@@ -4,4 +4,4 @@ let tela = document.querySelector("canvas"),
 function play() {
 	preload();
 }
-setInterval(play, 20);
+playGame = setInterval(play, 20);

@@ -2,14 +2,18 @@
 let imgCarros = [
 	imgCarro1= document.querySelector('#img-carro-1'),
 	imgCarro2 = document.querySelector('#img-carro-2'),
-	imgCarro3 = document.querySelector('#img-carro-3')
+	imgCarro3 = document.querySelector('#img-carro-3'),
+	imgCarro4 = document.querySelector('#img-carro-4'),
+	imgCarro5 = document.querySelector('#img-carro-5'),
+	imgCarro6 = document.querySelector('#img-carro-6')
 ];
 
-let xCarros = [600, 600, 600];
-let yCarros = [40, 96, 150];
+let xCarros = [600, 600, 600, 600, 600, 600];
+let yCarros = [40, 96, 150, 210, 270, 318];
 let comprimentoCarro = 50;
 let alturaCarro = 40;
-let velocidadeCarros = [2, 2.5, 3.2];
+let velocidadeCarros = [2, 2.5, 3.2, 5, 3.3, 2.3];
+let colidiu = false;
 
 function criaCarro(img, x, y) {
 	pincel.drawImage(img, x, y, comprimentoCarro, alturaCarro);
@@ -37,6 +41,16 @@ function loopCarro() {
 
 function colisao() {
 	for(let i = 0; i < imgCarros.length; i++) {
-		colisaoAtor(xCarros[i], yCarros[i]);
+		colidiu = colisaoAtor(xAtor, yAtor, comprimentoAtor, alturaAtor, xCarros[i], yCarros[i], comprimentoCarro, alturaCarro);
+		if(colidiu) {
+			yAtor = 366;
+			if(tentativas) {
+				tentativas -= 1;
+				verificaJogo();
+			}
+			if(meusPontos) {
+				meusPontos -= 1;				
+			}
+		}
 	}
 }

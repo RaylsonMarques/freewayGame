@@ -8,7 +8,10 @@ function preload() {
 	desenhaBg();
 	desenhaAtor();
 	desenhaCarro();
-	//movimentaCarros();
+	movimentaCarros();
 	loopCarro();
 	colisao();
+	desenhaPlacar(meusPontos, 500/5, 25);
+	marcaPonto();
+	desenhaTentativas(tentativas, 500-150,25);
 }
