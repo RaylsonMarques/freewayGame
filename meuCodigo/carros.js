@@ -43,6 +43,7 @@ function colisao() {
 	for(let i = 0; i < imgCarros.length; i++) {
 		colidiu = colisaoAtor(xAtor, yAtor, comprimentoAtor, alturaAtor, xCarros[i], yCarros[i], comprimentoCarro, alturaCarro);
 		if(colidiu) {
+			sons[0].play();
 			yAtor = 366;
 			if(tentativas) {
 				tentativas -= 1;

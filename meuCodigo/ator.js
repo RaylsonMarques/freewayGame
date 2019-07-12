@@ -58,6 +58,7 @@ function desenhaTentativas(texto, x, y) {
 function marcaPonto() {
 	if(yAtor < 5){
 		meusPontos += 1;
+		sons[1].play();
 		yAtor = 366;
 	}
 }
