@@ -12,7 +12,7 @@ let xCarros = [600, 600, 600, 600, 600, 600];
 let yCarros = [40, 96, 150, 210, 270, 318];
 let comprimentoCarro = 50;
 let alturaCarro = 40;
-let velocidadeCarros = [2, 2.5, 3.2, 5, 3.3, 2.3];
+let velocidadeCarros = [1, 1.25, 1.7, 2.5, 1.65, 1.5];
 let colidiu = false;
 
 function criaCarro(img, x, y) {
@@ -45,7 +45,7 @@ function colisao() {
 		if(colidiu) {
 			sons[0].play();
 			yAtor = 366;
-			if(tentativas) {
+			if(meusPontos == 0 && tentativas) {
 				tentativas -= 1;
 				verificaJogo();
 			}
